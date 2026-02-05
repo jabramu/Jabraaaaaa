@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>هدية خاصة ❤️</title>
+    <style>
+        body {
+            background-color: #fff0f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #ff4d6d;
+        }
+        .heart {
+            font-size: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .heart:hover {
+            transform: scale(1.2);
+        }
+        #message {
+            display: none;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="heart" onclick="showMessage()">❤️</div>
+    
+    <div id="message">
+        <h1>كل عام وأنتِ/أنتَ بخير!</h1>
+        <p>هذا الموقع البسيط هو تعبير صغير عن مكانتك عندي.</p>
+        <p>شكرًا لأنك في حياتي.</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.querySelector('.heart').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
